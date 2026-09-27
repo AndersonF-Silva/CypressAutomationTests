@@ -11,6 +11,14 @@ class ProductTabsComponent {
         return cy.get('[data-name="Tabs"]').first()
     }
 
+    // O componente só responde a cliques depois que o main.js (lazy-load) executa.
+    // Nesse momento ele esconde os blocos inativos com "height: 0px" inline.
+    waitUntilReady() {
+        this.getContainer()
+            .find('.block[style*="height: 0px"]')
+            .should('exist')
+    }
+
     getTabLink(tabName) {
         return this.getContainer()
             .find('.tab-navigation .tab-a')
@@ -22,6 +30,7 @@ class ProductTabsComponent {
     }
 
     clickTab(tabName) {
+        this.waitUntilReady()
         this.getTabLink(tabName).click()
     }
 
