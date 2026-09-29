@@ -7,4 +7,5 @@ When("I click on the {string} menu", (menuName) => {
 
 Then("I should be redirected to the {string} page", (menuName) => {
     cy.location("pathname").should("include", MainMenu.getExpectedPath(menuName))
+    MainMenu.getTitleContainer().should("be.visible").and("contain.text", MainMenu.getExpectedTitleText(menuName))
 })

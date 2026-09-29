@@ -7,32 +7,32 @@ Feature: Home page - Main menu
   Background:
     Given I visit the home page
 
-  @CTU004
+  @CTU005
   Scenario: Validate click on the "For her" menu
     When I click on the "For her" menu
     Then I should be redirected to the "For her" page
 
-  @CTU005
+  @CTU006
   Scenario: Validate click on the "For him" menu
     When I click on the "For him" menu
     Then I should be redirected to the "For him" page
 
-  @CTU006
+  @CTU007
   Scenario: Validate click on the "For all" menu
     When I click on the "For all" menu
     Then I should be redirected to the "For all" page
 
-  @CTU007
+  @CTU008
   Scenario: Validate click on the "New products" menu
     When I click on the "New products" menu
     Then I should be redirected to the "New products" page
 
-  @CTU008
+  @CTU009
   Scenario: Validate click on the "Featured products" menu
     When I click on the "Featured products" menu
     Then I should be redirected to the "Featured products" page
 
-  @CTU009
+  @CTU010
   Scenario: Validate click on the "All Products" menu
     When I click on the "All Products" menu
     Then I should be redirected to the "All Products" page
